@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][]
 
+### Removed
+- ArmoryBadge from tooltips
+
 ## [0.8.4][] - 2020-03-28
 ### Fixed
 - Move to AWS lambda
