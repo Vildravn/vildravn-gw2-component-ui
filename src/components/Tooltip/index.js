@@ -6,7 +6,6 @@ import { createSelector } from 'reselect';
 import cx from 'classnames';
 
 import { showTooltip } from '../../actions/gw2';
-import ArmoryBadge from '../ArmoryBadge';
 import MouseFollow from '../MouseFollow';
 import AmuletTooltip from './Amulet';
 import ItemTooltip from './Item';
@@ -34,7 +33,6 @@ type TooltipData = {
 type BaseProps = {
   tooltip?: TooltipData,
   showTooltip?: (boolean) => void,
-  showBadge?: boolean,
   className?: string,
 };
 
@@ -43,7 +41,7 @@ export const BaseTooltip = (props: BaseProps) => {
     return null;
   }
 
-  const { tooltip, showBadge, className } = props;
+  const { tooltip, className } = props;
 
   let content;
 
@@ -85,7 +83,6 @@ export const BaseTooltip = (props: BaseProps) => {
   return (
     <div className={cx(styles.root, className)}>
       {content}
-      {showBadge && <Background className={styles.badge}><ArmoryBadge /></Background>}
     </div>
   );
 };
