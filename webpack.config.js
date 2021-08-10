@@ -11,7 +11,7 @@ const config = {
   context: __dirname,
 
   entry: {
-    'armory-component-ui': './src/index.js',
+    'vildravn-gw2-component-ui': './src/index.js',
   },
 
   output: {
